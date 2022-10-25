@@ -1,0 +1,16 @@
+PODS:
+  - BYCRefresh (0.1.0)
+
+DEPENDENCIES:
+  - BYCRefresh (from `../`)
+
+EXTERNAL SOURCES:
+  BYCRefresh:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BYCRefresh: 24e8b96ffcff33a0cfbcaafae207cf94ce6b7b4e
+
+PODFILE CHECKSUM: 138e768abad47365cfcb1932bb05b2da0c5f9c63
+
+COCOAPODS: 1.11.3
