@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'BYCRefresh_Example' do
+  pod 'BYCRefresh', :path => '../'
+
+  target 'BYCRefresh_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
