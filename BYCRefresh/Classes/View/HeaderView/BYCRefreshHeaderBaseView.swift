@@ -9,18 +9,18 @@ import UIKit
 
 open class BYCRefreshHeaderBaseView: UIView {
 
-    var automaticallyChangeAlpha = true
+    public var automaticallyChangeAlpha = true
     
-    var scrollView: UIScrollView?
+    public var scrollView: UIScrollView?
     
     var refreshingBlock = {}
     var scrollViewOriginalInset: UIEdgeInsets?
     
-    var refreshing: Bool {
+    public var refreshing: Bool {
         state == .refreshing || state == .willRefresh
     }
     
-    var pullingPercent: CGFloat = 0.0 {
+    open var pullingPercent: CGFloat = 0.0 {
         didSet {
             if pullingPercent > 1 {
                 pullingPercent = 1
@@ -36,7 +36,7 @@ open class BYCRefreshHeaderBaseView: UIView {
         }
     }
     
-    var state: RefreshState = .idle {
+    public var state: RefreshState = .idle {
         willSet {
             if state == newValue { return }
             
@@ -90,7 +90,6 @@ open class BYCRefreshHeaderBaseView: UIView {
         if state == .willRefresh {
             state = .refreshing
         }
-        print("scrollView === \(scrollView.byc_size)")
     }
     
     open override func willMove(toSuperview newSuperview: UIView?) {

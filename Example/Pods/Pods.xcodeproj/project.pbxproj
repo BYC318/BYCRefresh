@@ -10,7 +10,6 @@
 		05A22DCC0D060628CC555E983F512E39 /* UIScrollView+BYCExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83CB8B4658F59702392688A425F098 /* UIScrollView+BYCExtentsion.swift */; };
 		0B54E10EA05CC087B3EF46218A8AE376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		1F982A5FB398913CA1E501D29EE56FC2 /* UIView+BYCExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569851CDCF67E2A201DA00EA9174B2F /* UIView+BYCExtentsion.swift */; };
-		2793BB18DD19CBBF865B9DFB8D3433EE /* BYCStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF22F077530422D46217D2ABC10A8E3 /* BYCStringExtension.swift */; };
 		3C2529EB68091EA71B927B19A5677167 /* BYCRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D05207DA5D935465546FAD19554FED3 /* BYCRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5279A0E57AB855F6417CA67B16ADCACB /* BYCRefreshFooterDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3459F67506A6136DCCA4A7A41B37852 /* BYCRefreshFooterDefaultView.swift */; };
 		6427AD19A7660EBC088A05FC889972AB /* Pods-BYCRefresh_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DA17A11D8A78992E6B44C6F5C101C5 /* Pods-BYCRefresh_Tests-dummy.m */; };
@@ -44,13 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0023E9109291EA1EA925F05D891F9FF1 /* BYCRefresh.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BYCRefresh.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0023E9109291EA1EA925F05D891F9FF1 /* BYCRefresh.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BYCRefresh.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0388C07B6F266AEDA8A3F30BCB0D8336 /* Pods-BYCRefresh_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BYCRefresh_Example-frameworks.sh"; sourceTree = "<group>"; };
 		054D48B4438B00035442E427F9EB2B57 /* Pods-BYCRefresh_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BYCRefresh_Example"; path = Pods_BYCRefresh_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06301101A7F7F72EC3905FCBAEEF14A2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		06301101A7F7F72EC3905FCBAEEF14A2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0981DA2197DD173D2903DB2BEF8E0519 /* Pods-BYCRefresh_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BYCRefresh_Example-Info.plist"; sourceTree = "<group>"; };
 		0A4613DBA857EE219971BB05D59C9CD3 /* BYCRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BYCRefresh.release.xcconfig; sourceTree = "<group>"; };
-		10F333C1C52F010F248D3A28BB71A1D6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		10F333C1C52F010F248D3A28BB71A1D6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1B20D4284173BAD9071C295D4A2D7BB7 /* Pods-BYCRefresh_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BYCRefresh_Tests-umbrella.h"; sourceTree = "<group>"; };
 		2D05207DA5D935465546FAD19554FED3 /* BYCRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BYCRefresh-umbrella.h"; sourceTree = "<group>"; };
 		3145C71785364F21B78CE2D3AB5670A5 /* BYCRefreshFooterBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BYCRefreshFooterBaseView.swift; sourceTree = "<group>"; };
@@ -71,12 +70,11 @@
 		95DA17A11D8A78992E6B44C6F5C101C5 /* Pods-BYCRefresh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BYCRefresh_Tests-dummy.m"; sourceTree = "<group>"; };
 		9ADFB6BADE8521EB4D44D170CD3D0F90 /* Pods-BYCRefresh_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BYCRefresh_Tests-Info.plist"; sourceTree = "<group>"; };
 		9C83CB8B4658F59702392688A425F098 /* UIScrollView+BYCExtentsion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIScrollView+BYCExtentsion.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EF528F8532599061A7D3E5507922911 /* BYCRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BYCRefresh.modulemap; sourceTree = "<group>"; };
 		B05E26A2611E4720BF4C1AD6440FA188 /* Pods-BYCRefresh_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BYCRefresh_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C609C8F82190FA4382CB61A848B433FD /* BYCRefresh */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BYCRefresh; path = BYCRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C942E6B57DD8ED49DBD5632D4DA729F0 /* BYCRefreshData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BYCRefreshData.swift; sourceTree = "<group>"; };
-		CFF22F077530422D46217D2ABC10A8E3 /* BYCStringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BYCStringExtension.swift; sourceTree = "<group>"; };
 		DDD30EFF741BB9345ECBA1C57A437CCE /* Pods-BYCRefresh_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BYCRefresh_Tests"; path = Pods_BYCRefresh_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE0EF33050D8FC89562704A323BC021 /* BYCRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BYCRefresh-prefix.pch"; sourceTree = "<group>"; };
 		E754ADAE106B749C7A6E7CCFD8DBC978 /* BYCRefresh-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BYCRefresh-Info.plist"; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				C942E6B57DD8ED49DBD5632D4DA729F0 /* BYCRefreshData.swift */,
-				CFF22F077530422D46217D2ABC10A8E3 /* BYCStringExtension.swift */,
 				9C83CB8B4658F59702392688A425F098 /* UIScrollView+BYCExtentsion.swift */,
 				4569851CDCF67E2A201DA00EA9174B2F /* UIView+BYCExtentsion.swift */,
 			);
@@ -170,7 +167,6 @@
 				3145C71785364F21B78CE2D3AB5670A5 /* BYCRefreshFooterBaseView.swift */,
 				F3459F67506A6136DCCA4A7A41B37852 /* BYCRefreshFooterDefaultView.swift */,
 			);
-			name = FooterView;
 			path = FooterView;
 			sourceTree = "<group>";
 		};
@@ -188,7 +184,6 @@
 				3767D5C9160283588CA3A20BA694206D /* BYCRefreshHeaderBaseView.swift */,
 				44E58E7A8F0D5E4DBDC2E485EEDFCBA4 /* BYCRefreshHeaderDefaultView.swift */,
 			);
-			name = HeaderView;
 			path = HeaderView;
 			sourceTree = "<group>";
 		};
@@ -446,7 +441,6 @@
 				5279A0E57AB855F6417CA67B16ADCACB /* BYCRefreshFooterDefaultView.swift in Sources */,
 				D8634903F401D5F8235A168CA240E44E /* BYCRefreshHeaderBaseView.swift in Sources */,
 				EC8BAE9322B61F27FB4D2FC66311A06D /* BYCRefreshHeaderDefaultView.swift in Sources */,
-				2793BB18DD19CBBF865B9DFB8D3433EE /* BYCStringExtension.swift in Sources */,
 				05A22DCC0D060628CC555E983F512E39 /* UIScrollView+BYCExtentsion.swift in Sources */,
 				1F982A5FB398913CA1E501D29EE56FC2 /* UIView+BYCExtentsion.swift in Sources */,
 			);
@@ -690,8 +684,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

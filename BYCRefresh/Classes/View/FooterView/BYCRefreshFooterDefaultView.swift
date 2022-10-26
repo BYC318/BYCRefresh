@@ -26,7 +26,7 @@ open class BYCRefreshFooterDefaultView: BYCRefreshFooterBaseView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override var pullingPercent: CGFloat {
+    open override var pullingPercent: CGFloat {
         didSet {
             print("pullingPercent == \(pullingPercent)")
         }
