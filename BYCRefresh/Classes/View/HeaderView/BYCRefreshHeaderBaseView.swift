@@ -12,7 +12,8 @@ open class BYCRefreshHeaderBaseView: UIView {
     public var automaticallyChangeAlpha = true
     
     public var scrollView: UIScrollView?
-    
+    public var offset = 0.0
+    public var diffInset = 0.0
     var refreshingBlock = {}
     var scrollViewOriginalInset: UIEdgeInsets?
     var insetTopSuspend = 0.0
@@ -62,7 +63,7 @@ open class BYCRefreshHeaderBaseView: UIView {
                         guard let scrollView = self.scrollView else { return }
                         guard let scrollViewOriginalInset = self.scrollViewOriginalInset else { return }
                         if scrollView.panGestureRecognizer.state != .cancelled {
-                            let top = scrollViewOriginalInset.top + self.byc_height
+                            let top = scrollViewOriginalInset.top + self.gap()
                             scrollView.byc_insetT = top;
                             scrollView.byc_offsetY = -top
                         }
@@ -91,7 +92,7 @@ open class BYCRefreshHeaderBaseView: UIView {
             return
         }
         byc_x = scrollView.byc_insetL
-        byc_y = -RefreshData.headerHeight
+        byc_y = offset
         byc_width = scrollView.byc_width
         byc_height = RefreshData.headerHeight
         
@@ -118,6 +119,10 @@ open class BYCRefreshHeaderBaseView: UIView {
         addObservers()
         setNeedsLayout()
         layoutIfNeeded()
+    }
+    
+    func gap() -> CGFloat {
+        offset >= 0 ? 0 : -((diffInset > 0 ? diffInset : 0) + offset)
     }
     
     func removeObservers() {
@@ -151,7 +156,7 @@ open class BYCRefreshHeaderBaseView: UIView {
         if state == .refreshing {
             let scrollViewOriginalInsetTop = scrollViewOriginalInset?.top ?? 0
             var insetT = -scrollView.byc_offsetY > scrollViewOriginalInsetTop ? -scrollView.byc_offsetY : scrollViewOriginalInsetTop
-            insetT = insetT > byc_height + scrollViewOriginalInsetTop ? byc_height + scrollViewOriginalInsetTop : insetT;
+            insetT = insetT > gap() + scrollViewOriginalInsetTop ? gap() + scrollViewOriginalInsetTop : insetT;
             scrollView.byc_insetT = insetT
             insetTopSuspend = scrollViewOriginalInsetTop - insetT
             return

@@ -36,6 +36,9 @@ class TestViewController: UIViewController {
         })
         tableview.byc_header?.backgroundColor = .red
         tableview.byc_footer?.backgroundColor = .orange
+        
+        tableview.byc_header?.offset = -50
+        tableview.byc_footer?.offset = -50
     }
     
 
@@ -48,7 +51,7 @@ class TestViewController: UIViewController {
 
 extension TestViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        10
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
