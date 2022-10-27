@@ -15,6 +15,7 @@ open class BYCRefreshHeaderBaseView: UIView {
     
     var refreshingBlock = {}
     var scrollViewOriginalInset: UIEdgeInsets?
+    var insetTopSuspend = 0.0
     
     public var refreshing: Bool {
         state == .refreshing || state == .willRefresh
@@ -41,8 +42,14 @@ open class BYCRefreshHeaderBaseView: UIView {
             if state == newValue { return }
             
             if newValue == .idle {
-                if state != .refreshing { return }
+                if state != .refreshing {
+                    DispatchQueue.main.async {
+                        self.setNeedsLayout()
+                    }
+                    return
+                }
                 UIView.animate(withDuration: RefreshData.animationDuration) {
+                    self.scrollView?.byc_insetT += self.insetTopSuspend;
                     if self.automaticallyChangeAlpha {
                         self.alpha = 0.0
                     }
@@ -56,7 +63,8 @@ open class BYCRefreshHeaderBaseView: UIView {
                         guard let scrollViewOriginalInset = self.scrollViewOriginalInset else { return }
                         if scrollView.panGestureRecognizer.state != .cancelled {
                             let top = scrollViewOriginalInset.top + self.byc_height
-                            scrollView.contentOffset = CGPoint.init(x: 0, y: -top)
+                            scrollView.byc_insetT = top;
+                            scrollView.byc_offsetY = -top
                         }
                     } completion: { finished in
                         self.refreshingBlock()
@@ -83,7 +91,7 @@ open class BYCRefreshHeaderBaseView: UIView {
             return
         }
         byc_x = scrollView.byc_insetL
-        byc_y = 0
+        byc_y = -RefreshData.headerHeight
         byc_width = scrollView.byc_width
         byc_height = RefreshData.headerHeight
         
@@ -140,7 +148,14 @@ open class BYCRefreshHeaderBaseView: UIView {
             setNeedsLayout()
             layoutIfNeeded()
         }
-        if state == .refreshing { return }
+        if state == .refreshing {
+            let scrollViewOriginalInsetTop = scrollViewOriginalInset?.top ?? 0
+            var insetT = -scrollView.byc_offsetY > scrollViewOriginalInsetTop ? -scrollView.byc_offsetY : scrollViewOriginalInsetTop
+            insetT = insetT > byc_height + scrollViewOriginalInsetTop ? byc_height + scrollViewOriginalInsetTop : insetT;
+            scrollView.byc_insetT = insetT
+            insetTopSuspend = scrollViewOriginalInsetTop - insetT
+            return
+        }
         scrollViewOriginalInset = scrollView.byc_inset
         guard let scrollViewOriginalInset = scrollViewOriginalInset else { return }
         let offsetY = scrollView.byc_offsetY

@@ -17,7 +17,7 @@ open class BYCRefreshFooterBaseView: UIView {
     var refreshingBlock = {}
     var scrollViewOriginalInset: UIEdgeInsets?
     var firstLayout = true
-    
+    var distance = 0.0
     
     public var refreshing: Bool {
         state == .refreshing || state == .willRefresh
