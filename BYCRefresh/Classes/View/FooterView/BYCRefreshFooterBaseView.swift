@@ -41,7 +41,7 @@ open class BYCRefreshFooterBaseView: UIView {
         }
     }
     
-    public var state: RefreshState = .idle {
+    open var state: RefreshState = .idle {
         willSet {
             if state == newValue { return }
             let oldState = state
@@ -94,6 +94,7 @@ open class BYCRefreshFooterBaseView: UIView {
         view.byc_height = RefreshData.footerHeight
         view.refreshingBlock = refreshingBlock
         view.alpha = view.pullingPercent
+        view.state = .idle
         return view
     }
     

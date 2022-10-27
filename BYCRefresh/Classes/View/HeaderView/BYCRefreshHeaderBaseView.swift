@@ -38,7 +38,7 @@ open class BYCRefreshHeaderBaseView: UIView {
         }
     }
     
-    public var state: RefreshState = .idle {
+    open var state: RefreshState = .idle {
         willSet {
             if state == newValue { return }
             
@@ -83,6 +83,7 @@ open class BYCRefreshHeaderBaseView: UIView {
         let view = Self()
         view.refreshingBlock = refreshingBlock
         view.alpha = view.pullingPercent
+        view.state = .idle
         return view
     }
     
