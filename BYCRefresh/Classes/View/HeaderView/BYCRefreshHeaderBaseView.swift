@@ -73,6 +73,10 @@ open class BYCRefreshHeaderBaseView: UIView {
                 }
             }
             
+            if newValue == .pulling {
+                UIImpactFeedbackGenerator.init(style: .heavy).impactOccurred()
+            }
+            
             DispatchQueue.main.async {
                 self.setNeedsLayout()
             }
